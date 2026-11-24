@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Informações institucionais, serviços e canais de atendimento do Tabelionato de Notas e Protesto de São João, Paraná.">
+  <meta name="theme-color" content="#12243b">
+  <title>Tabelionato de Notas e Protesto de São João | PR</title>
+  <style>
+    :root { --navy:#12243b; --navy-deep:#0b1829; --gold:#b89a5a; --gold-light:#e8dbba; --ink:#26364a; --muted:#627184; --paper:#ffffff; --cream:#f7f5f0; --line:#e4e6e8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--cream); color:var(--ink); line-height:1.65; }
+    a { color:inherit; }
+    a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .container { width:min(1120px, calc(100% - 40px)); margin:0 auto; }
+    .topbar { background:var(--navy-deep); color:#e8ebef; font-size:.86rem; padding:9px 0; }
+    .topbar-inner { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .topbar a { text-decoration:none; }
+    header { background:var(--paper); border-bottom:1px solid var(--line); }
+    .header-inner { min-height:102px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .brand { display:flex; gap:16px; align-items:center; text-decoration:none; color:var(--navy); }
+    .seal { height:64px; width:64px; flex:none; display:grid; place-items:center; border:2px solid var(--gold); border-radius:50%; color:var(--gold); font-family:Georgia,serif; font-size:1.9rem; }
+    .brand strong { display:block; font-family:Georgia,'Times New Roman',serif; font-size:1.2rem; line-height:1.3; }
+    .brand small { display:block; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; margin-top:4px; }
+    nav { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
+    nav a { font-weight:600; font-size:.92rem; text-decoration:none; color:var(--navy); }
+    nav a:hover, .link:hover { color:#886b32; }
+    .hero { background:linear-gradient(110deg,rgba(9,22,39,.98),rgba(22,45,72,.94)),radial-gradient(circle at 85% 20%,#7f785b 0,transparent 55%); color:#fff; padding:98px 0 106px; position:relative; overflow:hidden; }
+    .hero:after { content:""; width:420px; height:420px; position:absolute; border:1px solid rgba(184,154,90,.24); border-radius:50%; right:-135px; top:-90px; box-shadow:0 0 0 58px rgba(184,154,90,.05), 0 0 0 118px rgba(184,154,90,.025); pointer-events:none; }
+    .hero .eyebrow { color:var(--gold-light); text-transform:uppercase; letter-spacing:.22em; font-weight:bold; font-size:.78rem; }
+    h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; line-height:1.2; }
+    h1 { font-size:clamp(2.35rem,5vw,4.1rem); max-width:750px; margin:20px 0 22px; font-weight:normal; }
+    .hero p { max-width:640px; font-size:1.1rem; color:#e1e6ed; }
+    .gold-rule { height:3px; width:72px; background:var(--gold); margin:25px 0; }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:30px; }
+    .button { display:inline-block; padding:13px 22px; border-radius:3px; font-size:.93rem; font-weight:bold; text-decoration:none; transition:transform .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); }
+    .button-gold { background:var(--gold); color:var(--navy-deep); }
+    .button-gold:hover { background:#d0b57b; }
+    .button-outline { border:1px solid #bdc9d5; color:#fff; }
+    section { padding:76px 0; }
+    .section-head { text-align:center; margin-bottom:38px; }
+    .section-head .eyebrow { color:#8c6e37; text-transform:uppercase; font-size:.76rem; letter-spacing:.18em; font-weight:bold; }
+    .section-head h2 { font-size:clamp(1.85rem,3.5vw,2.65rem); color:var(--navy); margin:12px 0; font-weight:normal; }
+    .section-head p { max-width:660px; margin:0 auto; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    .service-card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--gold); padding:32px; box-shadow:0 8px 26px rgba(16,35,55,.04); }
+    .service-card .number { color:#9a7c42; font-family:Georgia,serif; font-size:1.1rem; }
+    .service-card h3 { margin:10px 0 14px; color:var(--navy); font-size:1.55rem; }
+    .service-card p { color:var(--muted); margin:0 0 12px; }
+    .service-card ul { padding-left:20px; margin:0; }
+    .service-card li { margin:6px 0; }
+    .about { background:#fff; }
+    .about-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:58px; align-items:center; }
+    .about h2 { font-size:clamp(2rem,4vw,2.8rem); color:var(--navy); font-weight:normal; margin:10px 0 22px; }
+    .about p { color:var(--muted); }
+    .eyebrow { color:#947840; letter-spacing:.15em; text-transform:uppercase; font-size:.78rem; font-weight:bold; }
+    .institution-box { background:var(--cream); border-left:4px solid var(--gold); padding:30px; }
+    .institution-box p { margin:0 0 16px; }
+    .institution-box p:last-child { margin:0; }
+    .institution-box strong { color:var(--navy); }
+    .contact { background:var(--cream); }
+    .contact-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .contact-card { padding:26px; background:white; border:1px solid var(--line); }
+    .contact-card h3 { color:var(--navy); margin:0 0 10px; font-size:1.24rem; }
+    .contact-card p { margin:0; color:var(--muted); }
+    .contact-card a { color:#75571f; font-weight:bold; overflow-wrap:anywhere; }
+    .note { color:var(--muted); font-size:.9rem; margin-top:22px; text-align:center; }
+    .privacy { background:#fff; }
+    .privacy-inner { max-width:830px; }
+    .privacy h2 { font-size:2rem; color:var(--navy); font-weight:normal; }
+    .privacy h3 { font-size:1.15rem; color:var(--navy); margin-top:26px; }
+    .privacy p { color:var(--muted); }
+    footer { background:var(--navy-deep); color:#d7dee6; padding:36px 0; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; align-items:center; flex-wrap:wrap; }
+    footer strong { color:#fff; }
+    footer a { color:var(--gold-light); }
+    .small { font-size:.86rem; }
+    @media(max-width:850px) { .header-inner { padding:18px 0; flex-direction:column; align-items:flex-start; } nav { gap:15px; } .about-grid { grid-template-columns:1fr; gap:25px; } .contact-grid { grid-template-columns:1fr; } }
+    @media(max-width:600px) { .container { width:min(100% - 30px,1120px); } .seal { width:52px; height:52px; font-size:1.55rem; } .brand strong { font-size:1rem; } .brand small { font-size:.65rem; } .hero { padding:72px 0; } section { padding:56px 0; } .grid { grid-template-columns:1fr; } .service-card { padding:24px; } nav { gap:12px 18px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container topbar-inner"><span>São João • Paraná</span><a href="tel:+554635331708">Atendimento: (46) 3533-1708</a></div></div>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="seal" aria-hidden="true">T</span><span><strong>Tabelionato de Notas<br>e Protesto de São João</strong><small>São João • Paraná</small></span></a>
+      <nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#institucional">Institucional</a><a href="#contato">Contato</a><a href="#privacidade">Privacidade</a></nav>
+    </div>
+  </header>
+  <main>
+    <div class="hero" id="inicio"><div class="container"><span class="eyebrow">Informação • Segurança jurídica • Atendimento</span><h1>Tabelionato de Notas e Protesto de São João</h1><div class="gold-rule"></div><p>Informações sobre serviços notariais e de protesto, localização e canais oficiais de atendimento da serventia.</p><div class="actions"><a class="button button-gold" href="https://wa.me/554635331708" target="_blank" rel="noopener noreferrer">Entrar em contato pelo WhatsApp</a><a class="button button-outline" href="#servicos">Conheça nossos serviços</a></div></div></div>
+    <section id="servicos"><div class="container"><div class="section-head"><span class="eyebrow">Nossos serviços</span><h2>Notas e Protesto</h2><p>Consulte nossa equipe para orientações sobre documentação, procedimentos e atendimento.</p></div><div class="grid"><article class="service-card"><span class="number">01 / NOTAS</span><h3>Serviços Notariais</h3><p>Atos destinados à formalização de declarações, negócios e outros fatos com a intervenção notarial prevista em lei.</p><ul><li>Escrituras públicas</li><li>Procurações públicas</li><li>Atas notariais</li><li>Reconhecimento de firmas</li><li>Autenticação de cópias</li><li>Certidões de atos notariais</li></ul></article><article class="service-card"><span class="number">02 / PROTESTO</span><h3>Protesto de Títulos</h3><p>Atendimento relacionado a títulos e outros documentos de dívida, conforme a legislação aplicável.</p><ul><li>Apresentação de títulos para protesto</li><li>Informações sobre intimações</li><li>Pagamento e procedimentos relacionados</li><li>Cancelamento de protesto</li><li>Certidões de protesto</li><li>Orientações a credores e devedores</li></ul></article></div></div></section>
+    <section class="about" id="institucional"><div class="container about-grid"><div><span class="eyebrow">Institucional</span><h2>Atendimento com responsabilidade e segurança jurídica</h2><p>O Tabelionato de Notas e Protesto de São João presta serviços públicos delegados nas áreas de Notas e Protesto, observadas as disposições legais e normativas aplicáveis.</p><p>Este site reúne informações institucionais e facilita o acesso aos canais de atendimento. A prática de atos e a emissão de documentos dependem dos requisitos legais de cada serviço.</p></div><aside class="institution-box"><p><strong>Serventia</strong><br>Tabelionato de Notas e Protesto de São João</p><p><strong>Tabeliã titular</strong><br>Elisana Carneiro Crema</p><p><strong>Município</strong><br>São João — Paraná</p></aside></div></section>
+    <section class="contact" id="contato"><div class="container"><div class="section-head"><span class="eyebrow">Fale conosco</span><h2>Informações e atendimento</h2><p>Utilize nossos canais oficiais para obter orientações sobre os serviços.</p></div><div class="contact-grid"><div class="contact-card"><h3>Endereço</h3><p>Rua Santa Rita, 96<br>São João — PR<br>CEP 85570-000</p></div><div class="contact-card"><h3>Telefone e WhatsApp</h3><p><a href="tel:+554635331708">(46) 3533-1708</a><br><a href="https://wa.me/554635331708" target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a></p></div><div class="contact-card"><h3>Horário e Instagram</h3><p>Segunda a sexta-feira<br>8h às 11h e 13h às 17h<br><a href="https://www.instagram.com/cartoriosaojoaopr/" target="_blank" rel="noopener noreferrer">@cartoriosaojoaopr</a></p></div></div><p class="note">Confirme previamente os documentos necessários e a disponibilidade do atendimento presencial.</p></div></section>
+    <section class="privacy" id="privacidade"><div class="container privacy-inner"><span class="eyebrow">Transparência</span><h2>Privacidade e proteção de dados</h2><p>O Tabelionato de Notas e Protesto de São João reconhece a importância da proteção de dados pessoais e da observância da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), bem como das normas aplicáveis aos serviços notariais e de protesto.</p><h3>Este site</h3><p>Esta página tem finalidade informativa e não oferece formulários de coleta de dados, cadastro de usuários ou pagamentos online. O site não instala ferramentas próprias de análise de navegação nem cookies de publicidade.</p><h3>Atendimento e serviços</h3><p>Dados eventualmente fornecidos pelos canais de atendimento e na prática dos atos são tratados conforme as finalidades e obrigações legais de cada serviço. Para esclarecimentos sobre o tratamento de dados pessoais, entre em contato pelo telefone informado nesta página.</p><h3>Links externos</h3><p>Ao acessar links para WhatsApp ou Instagram, o visitante estará sujeito também às práticas de privacidade dessas plataformas.</p></div></section>
+  </main>
+  <footer><div class="container footer-inner"><div><strong>Tabelionato de Notas e Protesto de São João</strong><div class="small">Rua Santa Rita, 96 • São João/PR • (46) 3533-1708</div></div><div class="small">Site institucional informativo • <a href="#privacidade">Privacidade</a></div></div></footer>
+</body>
+</html>
